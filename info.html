@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Portal - About BMI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the Info page to make it read better */
+        .info-card h2 { color: #27ae60; margin-top: 25px; border-bottom: 2px solid #eee; padding-bottom: 10px;}
+        .info-card h3 { margin-top: 20px; color: #444; }
+        .info-card p, .info-card li { line-height: 1.6; color: #555; }
+        .info-card ul { padding-left: 20px; }
+        .info-card li { margin-bottom: 8px; }
+        
+        .formula-box {
+            background: #2c3e50;
+            color: #2ecc71;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 20px 0;
+            overflow-x: auto; /* for mobile */
+        }
+
+        /* Image styling */
+        .bmi-chart-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .bmi-chart-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlight { font-weight: bold; color: #e74c3c; } /* for focus points */
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="info.html" class="nav-link active">About BMI</a>
+    </nav>
+
+    <main class="container">
+        <div class="card info-card">
+            <h1>What is Body Mass Index (BMI)?</h1>
+            <p>BMI stands for Body Mass Index. It is a simple index of weight-for-height that is commonly used to classify underweight, overweight and obesity in adults. It is defined as a person's weight in kilograms divided by the square of his height in meters (kg/m&sup2;).</p>
+            
+            <p>It is an international standard used to estimate body fat and determine whether a person is within a healthy weight range.</p>
+            
+            <hr>
+
+            <h2>1. The BMI Calculation Formula</h2>
+            <p>The calculation method is very straightforward. The formula is:</p>
+            
+            <div class="formula-box">
+                BMI = Weight (kg) / [Height (m)]&sup2;
+            </div>
+
+            <p><strong>Example Calculation:</strong></p>
+            <p>If a person weighs 65kg and is 1.7m (170cm) tall, the calculation is:</p>
+            <p style="font-family: monospace; background: #f9f9f9; padding: 10px; border-radius: 4px;">
+                65 &divide; (1.7 &times; 1.7) = 65 &divide; 2.89 &approx; 22.49
+            </div>
+            <p>So, this person's BMI is approximately 22.5.</p>
+
+            <hr>
+
+            <h2>2. International Standard Ranges</h2>
+            <p>According to the World Health Organization (WHO), BMI values are categorized into several ranges. Refer to the visual chart below to see the body shapes associated with different ranges:</p>
+
+           <div class="bmi-chart-container">
+                <img src="bmi-chart.png" alt="WHO BMI Classification Chart" class="bmi-chart-img">
+                <p class="bmi-chart-caption">Source: World Health Organization BMI Categories</p>
+           </div>
+
+            <p>Here is a summary table based on the standard ranges:</p>
+            <table style="width:100%; border-collapse: collapse; margin: 15px 0; text-align: left; border: 1px solid #ddd;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="padding: 12px; border: 1px solid #ddd;">BMI Value</th>
+                        <th style="padding: 12px; border: 1px solid #ddd;">Classification</th>
+                        <th style="padding: 12px; border: 1px solid #ddd;">Health Risk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Less than 18.5</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Underweight</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Malnutrition, lower immunity (Increased risk)</td>
+                    }
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd; background: #eafaf1;">18.5 – 24.9</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; background: #eafaf1; font-weight: bold; color: #27ae60;">Healthy Weight</td>
+                        <td style="padding: 12px; border: 1px solid #ddd; background: #eafaf1;">Lowest risk</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">25.0 – 29.9</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Overweight</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Increased risk of cardiovascular disease</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;">30.0 or above</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Obese</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">High risk for chronic diseases like hypertension and diabetes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h2>3. Why should we care about BMI?</h2>
+            <p>For most people (especially teens in growth), BMI is a good early warning indicator:</p>
+            <ul>
+                <li><strong>Monitor Health:</strong> It helps us quickly assess if we are within a healthy weight range.</li>
+                <li><strong>Prevent Disease:</strong> A BMI that is too high is linked to hypertension, Type 2 diabetes, and heart disease. A BMI that is too low can mean anemia or osteoporosis.</li>
+            </ul>
+
+            <hr>
+
+            <h2>4. Limitations of BMI (<span class="highlight">Crucial!</span>)</h2>
+            <p>While convenient, BMI is not perfect because <span class="highlight">it does not distinguish between fat and muscle mass.</span></p>
+            <ul>
+                <li><strong>Athletes/Fitness Enthusiasts:</strong> Muscle is denser than fat. A person who exercises regularly or plays basketball might have a high BMI due to muscle mass, but this does not mean they are obese.</li>
+                <li><strong>Growing Teenagers:</strong> During puberty, the body develops rapidly, and bone/muscle changes affect the value. Therefore, specialized "Teen BMI Percentile Charts" should be used for reference.</li>
+            </ul>
+
+            <hr>
+
+            <h2>5. How to maintain a healthy BMI</h2>
+            <p>If you find that your BMI is not in the normal range, you can try adjusting through:</p>
+            <ul>
+                <li><strong>Balanced Diet:</strong> Reduce intake of high-sugar, high-fat foods. Eat more vegetables and protein.</li>
+                <li><strong>Regular Exercise:</strong> Combine aerobic exercise (running, swimming) and strength training (push-ups, basketball practice).</li>
+                <li><strong>Adequate Sleep:</strong> Lack of sleep affects metabolism, causing abnormal weight fluctuations.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <button class="btn-logout" onclick="logout()">Log Out</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
